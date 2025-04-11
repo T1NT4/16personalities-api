@@ -40,7 +40,7 @@ const getTraits = async (): Promise<TraitsResponse> => {
 }
 
 const getPersonalityTest = async (): Promise<Array<Question>> => {
-  const res = await session.get(`${BASE_URL}/free-personality-test`)
+  const res = await session.get(`${BASE_URL}/teste-de-personalidade`)
   const regex = new RegExp(/:questions="(\[.*?\])"/, "gm")
   const matches = regex.exec(res.data)
 
@@ -56,13 +56,13 @@ const getPersonalityTest = async (): Promise<Array<Question>> => {
   const questions = JSON.parse(replacedQuestions)
 
   const defaultOptions: QuestionOption[] = [
-    { text: "Disagree strongly", value: -3 },
-    { text: "Disagree moderately", value: -2 },
-    { text: "Disagree a little", value: -1 },
-    { text: "Neither agree nor disagree", value: 0 },
-    { text: "Agree a little", value: 1 },
-    { text: "Agree moderately", value: 2 },
-    { text: "Agree strongly", value: 3 },
+    { text: "Discordo fortemente", value: -3 },
+    { text: "Discordo moderadamente", value: -2 },
+    { text: "Desconcordo", value: -1 },
+    { text: "Não tenho certeza", value: 0 },
+    { text: "Concordo", value: 1 },
+    { text: "Concordo moderadamente", value: 2 },
+    { text: "Concordo fortemente", value: 3 },
   ]
 
   return questions.map((question: any) => ({

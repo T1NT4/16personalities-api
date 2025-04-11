@@ -18,6 +18,7 @@ const submit = async (
     answers as Submission[],
     gender as Gender
   )
+  console.log(result)
   res.json(result)
 }
 

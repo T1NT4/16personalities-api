@@ -1,9 +1,14 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 import express, { Request, Response, NextFunction } from "express"
 import cors from "cors"
 import morgan from "morgan"
 import routes from "./routes"
 import env from "@/env"
 import { HttpError } from "./utils/httpError"
+
+
 
 const app = express()
 
