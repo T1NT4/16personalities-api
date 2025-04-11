@@ -1,4 +1,4 @@
-export const BASE_URL = "https://www.16personalities.com/br"
+export const BASE_URL = "https://www.16personalities.com"
 
 const routeConfig = {
   "api.user": "/api/user",

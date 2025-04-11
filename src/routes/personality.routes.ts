@@ -10,7 +10,7 @@ router.get("/questions", catchAsync(personalityController.getQuestions))
 
 router.post(
   "/submit",
-  validator({ body: testValidator.submission }),
+  // validator({ body: testValidator.submission }),
   catchAsync(personalityController.submit)
 )
 

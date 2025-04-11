@@ -90,26 +90,27 @@ const getTestResults = async (
     teamInviteKey: "",
     inviteCode: "",
   }
-
+    
   const res = await session.post<GetTestResultsPayload>(
     routes["test-results"],
     payload
   )
-
-  await session.post(res.data.redirect, payload)
+  console.log(res.data.redirect)
+  // await session.post(res.data.redirect, payload)
+  
 
   const sess = await getSession()
-
+  
   const traitsData = await getTraits()
-
+  console.log(sess.user.localized)
   return {
     avatarAlt: sess.user.avatarAlt,
     avatarSrc: sess.user.avatar,
     avatarSrcStatic: sess.user.avatarFull,
     personality: sess.user.personality,
     variant: sess.user.variant,
-    niceName: sess.user.localized.niceType,
-    profileUrl: sess.user.localized.profileUrl,
+    niceName: sess.user.localized.niceName,
+    profileUrl: sess.user.avatar,
     traits: traitsData.traits,
     role: sess.user.role,
     strategy: sess.user.strategy,

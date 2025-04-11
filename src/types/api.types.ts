@@ -54,7 +54,7 @@ export interface User {
 
 export interface Localized {
   avatarAlt: string
-  niceType: string
+  niceName: string
   typeUrl: string
   fullTypeHtml: string
   profileUrl: string
