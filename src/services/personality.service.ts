@@ -29,6 +29,7 @@ const startSession = async (ip: string) => {
 
 const getSession = async (): Promise<SessionData> => {
   const res = await session.get(routes["api.session"])
+  
 
   return res.data
 }
@@ -40,7 +41,7 @@ const getTraits = async (): Promise<TraitsResponse> => {
 }
 
 const getPersonalityTest = async (): Promise<Array<Question>> => {
-  const res = await session.get(`${BASE_URL}/teste-de-personalidade`)
+  const res = await session.get(`${BASE_URL}/br/teste-de-personalidade`)
   const regex = new RegExp(/:questions="(\[.*?\])"/, "gm")
   const matches = regex.exec(res.data)
 
@@ -95,21 +96,21 @@ const getTestResults = async (
     routes["test-results"],
     payload
   )
-  console.log(res.data.redirect)
+  
   // await session.post(res.data.redirect, payload)
   
 
   const sess = await getSession()
   
   const traitsData = await getTraits()
-  console.log(sess.user.localized)
+  
   return {
     avatarAlt: sess.user.avatarAlt,
     avatarSrc: sess.user.avatar,
     avatarSrcStatic: sess.user.avatarFull,
     personality: sess.user.personality,
     variant: sess.user.variant,
-    niceName: sess.user.localized.niceName,
+    niceName: sess.user.role,
     profileUrl: sess.user.avatar,
     traits: traitsData.traits,
     role: sess.user.role,

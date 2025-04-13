@@ -1,4 +1,4 @@
-export const BASE_URL = "https://www.16personalities.com/br"
+export const BASE_URL = "https://www.16personalities.com"
 
 const routeConfig = {
   "api.user": "/api/user",
@@ -360,7 +360,7 @@ const routeConfig = {
   "users.profile.compare": "/profiles/{profile}/compare",
   "users.profile.view": "/profiles/{profile}",
   "generated::8c9ZsLoV5EkfD96y": "/test-results",
-  "test-results": "/test-results",
+  "test-results": "/br/resultados",
   "premium-profile.index": "/academy/{personality?}",
   "premium-profile.introduction": "/premium-profile/introduction",
   "tools.teams.index": "/teams",
