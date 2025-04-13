@@ -21,6 +21,7 @@ export enum Gender {
 }
 
 export interface TestResult {
+  ogLink: string
   niceName: string
   personality: string
   variant: string

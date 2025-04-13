@@ -105,6 +105,7 @@ const getTestResults = async (
   const traitsData = await getTraits()
   
   return {
+    ogLink : res.data.redirect,
     avatarAlt: sess.user.avatarAlt,
     avatarSrc: sess.user.avatar,
     avatarSrcStatic: sess.user.avatarFull,
