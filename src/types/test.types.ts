@@ -22,17 +22,6 @@ export enum Gender {
 
 export interface TestResult {
   ogLink: string
-  niceName: string
-  personality: string
-  variant: string
-  role: string
-  strategy: string
-
-  avatarSrc: string
-  avatarAlt: string
-  avatarSrcStatic: string
-  traits: Trait[]
-  profileUrl: string
 }
 
 export interface Trait {

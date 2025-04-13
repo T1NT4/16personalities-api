@@ -97,25 +97,8 @@ const getTestResults = async (
     payload
   )
   
-  // await session.post(res.data.redirect, payload)
-  
-
-  const sess = await getSession()
-  
-  const traitsData = await getTraits()
-  
   return {
-    ogLink : res.data.redirect,
-    avatarAlt: sess.user.avatarAlt,
-    avatarSrc: sess.user.avatar,
-    avatarSrcStatic: sess.user.avatarFull,
-    personality: sess.user.personality,
-    variant: sess.user.variant,
-    niceName: sess.user.role,
-    profileUrl: sess.user.avatar,
-    traits: traitsData.traits,
-    role: sess.user.role,
-    strategy: sess.user.strategy,
+    ogLink : res.data.redirect
   }
 }
 
