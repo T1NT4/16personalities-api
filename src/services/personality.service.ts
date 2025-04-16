@@ -59,7 +59,7 @@ const getPersonalityTest = async (): Promise<Array<Question>> => {
   const defaultOptions: QuestionOption[] = [
     { text: "Discordo fortemente", value: -3 },
     { text: "Discordo moderadamente", value: -2 },
-    { text: "Desconcordo", value: -1 },
+    { text: "Disconrdo", value: -1 },
     { text: "Não tenho certeza", value: 0 },
     { text: "Concordo", value: 1 },
     { text: "Concordo moderadamente", value: 2 },
